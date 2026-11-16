@@ -1,0 +1,26 @@
+{
+    "version": "1.0.6",
+    "description": "Free, open-source AirPlay receiver for Windows: mirror an iPhone, iPad or Mac, with lossless AirPlay music.",
+    "homepage": "https://jdkuk.github.io/AirGlass/",
+    "license": "GPL-3.0",
+    "url": "https://github.com/jdkuk/AirGlass/releases/download/v1.0.6/AirGlass-Setup-1.0.6.exe#/dl.7z",
+    "hash": "178d15a6d799a38a928c9ed5ed8c2e55d1ba7ab3aa59edf490c52dfc18d91af9",
+    "innosetup": true,
+    "pre_install": "Remove-Item \"$dir\\unins*.*\" -ErrorAction SilentlyContinue",
+    "bin": "AirGlass.exe",
+    "shortcuts": [
+        [
+            "AirGlass.exe",
+            "AirGlass"
+        ]
+    ],
+    "persist": [
+        "airglass.ini"
+    ],
+    "checkver": {
+        "github": "https://github.com/jdkuk/AirGlass"
+    },
+    "autoupdate": {
+        "url": "https://github.com/jdkuk/AirGlass/releases/download/v$version/AirGlass-Setup-$version.exe#/dl.7z"
+    }
+}
